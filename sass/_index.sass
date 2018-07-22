@@ -1,0 +1,253 @@
+@keyframes updownAni 
+	0%
+		margin-bottom: -5px
+	50%
+		margin-bottom: 0
+	100% 
+		margin-bottom: -5px
+
+=animationUpDown
+	+animation(updownAni 1s infinite)
+
+html,body 
+	width: 100%
+	height: 100%
+
+
+=fullPage 
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+
+ 
+.bigContainer 
+
+	+fullPage
+	max-width: 640px
+	left: 50%
+	margin-left: -320px	
+	overflow: auto
+	.container 
+		+coverBg 
+		+fullPage
+		+dTime
+		&.bigSize 
+			+scale(1.7)
+			+transform-origin(0,0) 
+		.logo
+			+bg('logo.png')
+			top: 40px
+			right: 30px
+			position: absolute
+			z-index: 5
+
+		.copyright
+			+bg('copyright.png')
+			position: absolute
+			right: 25px
+			bottom: 25px
+			z-index: 5
+		// page common style init
+		.page 
+			+coverBg 
+			+bgi('bg2.jpg')
+			+divGoVerticalCenter_forMom
+			+fullPage
+			display: none
+			
+			.wrap 	
+				+divGoVerticalCenter_forKid
+				position: relative
+
+				.content 
+					position: absolute
+					top: 0
+					left: 0
+
+					&:first-child
+						position: relative
+		.pageArr
+			// +bg('arr.png')
+			// position: absolute
+			// bottom: 15px
+			// left: 50%
+			// margin-left: -30px 
+			+animationUpDown
+			background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNyA0NCI+PHBhdGggZD0iTTI3IDIydjBMNSA0NGwtMi4xLTIuMUwyMi44IDIyIDIuOSAyLjEgNSAwIDI3IDIydjB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+)
+			position: absolute
+			bottom: 15px
+			left: 50%
+			margin-left: -30px 
+			width: 27px
+			height: 44px
+			+rotate(90deg)
+
+		@for $i from 1 through 7
+			// content pic
+			.p#{$i}
+				.wrap
+					@for $j from 1 through 10 
+						> .content:nth-child(#{$j})
+							+bg('p#{$i}.png')
+
+			// channel
+			&.channel_#{$i}	
+				.p#{$i}	 
+					display: block
+					
+	
+		
+
+
+.calendarPop
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 20
+	+divGoVerticalCenter_forMom
+
+	.bg 
+		width: 100%
+		position: absolute
+		height: 100%
+		left: 0
+		top: 0
+		background-color: rgba(black,0.7)
+
+	.wrap
+		width: 550px
+		padding: 50px
+		background-color: white
+		+border-radius(10px)
+		position: relative
+		+divGoVerticalCenter_forKid
+
+		.btn
+			+border-radius(10px)
+			margin: 40px auto 0
+			height: 120px
+			line-height: 120px
+			color: white
+			cursor: pointer
+			display: block
+
+		.blueBtn
+			background-color: #3b79c6
+
+		.greenBtn
+			background-color: #2baf4a	
+			
+		.clozBtn
+			position: absolute
+			top: -60px
+			right: 0
+			+bg('cloz.png')
+
+
+ 
+// costom rule
+.bigContainer 
+	.container
+		
+		.top
+			+bg('top.png')
+			position: absolute
+			top: 0	
+			left: 0
+			z-index: 15
+		.p1
+			+bgi('bg.jpg')
+			.wrap
+				padding-bottom: 400px
+				margin-left: -150px
+					
+					
+		.footer
+			position: absolute
+			left: 0
+			bottom: 60px
+			width: 100%
+			height: 100px
+			z-index: 2
+			
+			.trainBtn
+				+bg('trainBtn.png')
+				position: absolute
+				top: 0
+				right: 60px
+				display: none
+			.calendarBtn
+				+bg('cBtn.png')
+				position: absolute
+				top: 0
+				right: 60px
+				display: none
+			.googleMapBtn
+				+bg('mapBtn.png')
+				position: absolute
+				top: 0
+				right: 170px
+				display: none
+				
+				
+		// &.channel_1
+		// 	.footer
+		// 		.trainBtn
+		// 		.calendarBtn
+		// 		.googleMapBtn
+				
+		&.channel_2
+			.footer
+				.calendarBtn
+					display: block
+		&.channel_3
+			.footer
+				.calendarBtn
+					display: block
+		&.channel_4
+			.footer
+				.calendarBtn
+					display: block
+					
+					
+		&.channel_5
+			.footer
+				.calendarBtn
+					display: block
+
+		&.channel_6
+			.footer
+				.calendarBtn
+					display: block
+		&.channel_7	
+			.footer
+				.trainBtn
+					display: block
+				.googleMapBtn	
+					display: block				
+// 			.calendarBtn
+// 				position: absolute
+// 				width: 220px
+// 				height: 140px
+// 				top: 680px	
+// 				left: 10px
+// 				// border: 1px solid #000
+// 			.googleMapBtn
+// 				position: absolute
+// 				width: 220px
+// 				height: 140px
+// 				top: 680px	
+// 				left: 300px
+// 				// border: 1px solid #000
+// 		.imintBtn
+// 			position: absolute
+// 			width: 160px
+// 			height: 140px
+// 			top: 690px
+// 			left: 10px
+// 			// border: 1px solid #000
+			
