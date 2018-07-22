@@ -3174,29 +3174,19 @@ html, body {
   background-size: cover;
   background-position: 50% 50%;
   background-image: url("../images/bg2.jpg");
-  text-align: center;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   display: none;
-}
-.bigContainer .container .page:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
-.bigContainer .container .page .wrap {
-  display: inline-block;
-  vertical-align: middle;
   position: relative;
 }
-.bigContainer .container .page .wrap .content {
-  position: absolute;
-  top: 0;
-  left: 0;
+.bigContainer .container .page .wrap {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
 }
 .bigContainer .container .page .wrap .content:first-child {
   position: relative;
@@ -3208,8 +3198,7 @@ html, body {
   background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNyA0NCI+PHBhdGggZD0iTTI3IDIydjBMNSA0NGwtMi4xLTIuMUwyMi44IDIyIDIuOSAyLjEgNSAwIDI3IDIydjB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+);
   position: absolute;
   bottom: 15px;
-  left: 50%;
-  margin-left: -30px;
+  left: 80px;
   width: 27px;
   height: 44px;
   -moz-transform: rotate(90deg);
@@ -3668,9 +3657,8 @@ html, body {
 .bigContainer .container .footer {
   position: absolute;
   left: 0;
-  bottom: 60px;
+  bottom: 10px;
   width: 100%;
-  height: 100px;
   z-index: 2;
 }
 .bigContainer .container .footer .trainBtn {
@@ -3678,7 +3666,7 @@ html, body {
   height: 106px;
   background-image: url("../images/trainBtn.png");
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 60px;
   display: none;
 }
@@ -3687,7 +3675,7 @@ html, body {
   height: 89px;
   background-image: url("../images/cBtn.png");
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 60px;
   display: none;
 }
@@ -3696,7 +3684,7 @@ html, body {
   height: 106px;
   background-image: url("../images/mapBtn.png");
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 170px;
   display: none;
 }
